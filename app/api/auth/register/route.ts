@@ -4,6 +4,8 @@ import { NextRequest } from 'next/server';
 import dbConnect from '@/lib/dbConnect';
 import UserModel from '@/lib/models/UserModel';
 
+export const dynamic = 'force-dynamic';
+
 export const POST = async (request: NextRequest) => {
   const { name, email, password } = await request.json();
   await dbConnect();

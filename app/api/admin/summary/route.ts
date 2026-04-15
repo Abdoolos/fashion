@@ -4,6 +4,8 @@ import OrderModel from '@/lib/models/OrderModel';
 import ProductModel from '@/lib/models/ProductModel';
 import UserModel from '@/lib/models/UserModel';
 
+export const dynamic = 'force-dynamic';
+
 export const GET = auth(async (...request: any) => {
   const [req, { params }] = request;
   if (!req.auth || !req.auth.user?.isAdmin) {
